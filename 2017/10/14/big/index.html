@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="/css/gitment.css"> 
+  <script src="/js/gitment.js"></script> 
   <meta charset="utf-8">
   
   <meta name="renderer" content="webkit">
@@ -166,6 +168,24 @@
           </div>
           <div id="js-content" class="content-ll">
             <article id="post-big" class="article article-type-post " itemscope itemprop="blogPost">
+
+<div id="gitment"></div>
+
+<!-- 主页不要加载gitment -->
+
+
+<script>
+var gitment = new Gitment({
+  owner: 'kua-ku',
+  repo: 'git@github.com:kua-ku/kua-ku.github.io.git',
+  oauth: {
+    client_id: '0b3028bda279aadf4a4c',
+    client_secret: 'a2c7a4c8f9790fb26e10d18f9aab6a1d676b675d',
+  },
+})
+gitment.render('gitment')
+</script>
+
 
   <div class="article-inner">
     
