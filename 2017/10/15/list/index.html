@@ -6,14 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>时光倒流</title>
+  <title>自主理解js菜单切换 | 时光倒流</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="时光倒流">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="在源码站看到一个Tab菜单切换，就想看看。首先，了解css布局–定位，position:relation 根据自身的位置而定位，利用top、left进行位置移动而position：absolute 根据父级元素定位而定位，父级就是一个层，或者window窗口，方法一样。 步骤：先进行html+css 样式布局，需要建立四个ul li 分别为许嵩、周杰伦、林俊杰、陈奕迅接着建立四个div，是为了对">
+<meta name="keywords" content="菜单切换">
+<meta property="og:type" content="article">
+<meta property="og:title" content="自主理解js菜单切换">
+<meta property="og:url" content="http://yoursite.com/2017/10/15/list/index.html">
 <meta property="og:site_name" content="时光倒流">
+<meta property="og:description" content="在源码站看到一个Tab菜单切换，就想看看。首先，了解css布局–定位，position:relation 根据自身的位置而定位，利用top、left进行位置移动而position：absolute 根据父级元素定位而定位，父级就是一个层，或者window窗口，方法一样。 步骤：先进行html+css 样式布局，需要建立四个ul li 分别为许嵩、周杰伦、林俊杰、陈奕迅接着建立四个div，是为了对">
+<meta property="og:image" content="http://yoursite.com/images/list.jpg">
+<meta property="og:updated_time" content="2017-10-15T09:34:56.247Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="时光倒流">
+<meta name="twitter:title" content="自主理解js菜单切换">
+<meta name="twitter:description" content="在源码站看到一个Tab菜单切换，就想看看。首先，了解css布局–定位，position:relation 根据自身的位置而定位，利用top、left进行位置移动而position：absolute 根据父级元素定位而定位，父级就是一个层，或者window窗口，方法一样。 步骤：先进行html+css 样式布局，需要建立四个ul li 分别为许嵩、周杰伦、林俊杰、陈奕迅接着建立四个div，是为了对">
+<meta name="twitter:image" content="http://yoursite.com/images/list.jpg">
   
     <link rel="alternative" href="/atom.xml" title="时光倒流" type="application/atom+xml">
   
@@ -149,17 +156,15 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-list" class="article article-type-post " itemscope itemprop="blogPost">
 
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/15/list/">自主理解js菜单切换</a>
+    <h1 class="article-title" itemprop="name">
+      自主理解js菜单切换
     </h1>
   
 
@@ -187,6 +192,37 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/2.jpg">
+                      <span class="reward-type">支付宝</span>
+                    </div>
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="/img/3.jpg">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -205,17 +241,76 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/15/list/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="http://s.jiathis.com/qrcode.php?url=http://yoursite.com/2017/10/15/list/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
   
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2017/10/14/big/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大唐诗人的艰难求名路</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -235,239 +330,14 @@
 
 
 
-
   
-    <article id="post-big" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/big/">大唐诗人的艰难求名路</a>
-    </h1>
   
 
-        
-        <a href="/2017/10/14/big/" class="archive-article-date">
-  	<time datetime="2017-10-14T12:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><p>白居易：长安米贵，居住不易。</p>
-<p><img src="/images/1.jpg" alt="“诗人才子”"></p>
-<p>有时候，怀才比怀孕还难，时间虽然久了，但是没有个引产的人，还真不好生出来。</p>
-<p>要不然，怎么能够说，这世界“到处都是有才华的穷人”？</p>
-<p><img src="/images/i.jpg" alt="“诗人才子”"> </p>
-<p>千里马常有，而伯乐不常有。</p>
-<p>虽然从隋朝开始，中国就开始了通过考试选拔人才之路，但是有时候，辛辛苦苦寒窗几十年，还不如有人简简单单给你美言两三句。</p>
-<p>大唐盛世，“到处都是有才华的诗人”，再有才华的人，没有大boss的赏识和引荐，通往人生巅峰的道路一样艰难。</p>
-<p>毕竟，命运不会简单的通过一场考试来定成败。</p>
-<p><img src="/images/baijuyi.jpg" alt="“白居易”"> </p>
-<p>少年的白居易第一次来到京城长安，带着自己的作品去拜会当时的京城名流大咖顾况，顾况看着一个毛头小伙子，很不以为然，当他看到诗稿的名字写着“白居易”，就开玩笑的说：长安米贵，居住不易。</p>
-<p>可是等他读到 “离离原上草，一岁一枯荣。野火烧不尽，春风吹又生”的句子时，马上连声叫好，并说：“好诗！好食！有这么好的文采，要在长安居住又有什么难呢？”</p>
-<p>此后，顾况便经常向别人谈起白居易的诗才，盛加夸赞，白居易的诗名也就从此传开了。</p>
-<p>小白同学就这样，通过在大V的面前，成功的完成了一次面试，不仅保住了自己的名字，还扬显了自己的名声。</p>
-<p><img src="/images/libai.jpg" alt="“李白”"> </p>
-<p>另一位诗界翘楚李白同学，也是通过自己超凡脱俗的实力，得到了许多达官贵人引荐，最后还直接到了唐明皇御前，给杨贵妃专职写诗。三首醉后即兴而就的《清平调》，而今读来，依然朗朗上口，一时极致。</p>
-<p>而他在向众多当时大V自我推荐的过程中，最让人津津热道的，莫过于《与韩荆州书》。当年他逛到襄阳的时候，直接给地方长官荆州大咖韩朝宗写了一封自荐信，向他引荐了自己。</p>
-<p>“生不用封万户侯，但愿一识韩荆州。”文章开篇，李白就给韩朝宗一顶大大的高帽，说他有周公吐哺之风，去他家作客就好像登龙门一般，进去一个样，出来一个样。</p>
-<p>然后又说自己十五岁就开始仗剑走天涯，三十岁的时候写了很多的文章。</p>
-<p>十五六年来，走过了很多的路，从陇西流落到楚汉，又从楚汉奔波到长安；</p>
-<p>看过很多的风景，什么难于登天的蜀道啊，彩云之间的白帝城啊，相看两不厌的敬亭山啊，从九天飞落而来的庐山瀑布啊，在许多的路，许多的桥，许多的亭子画壁，还留下了署名的作品，写了洒脱飘逸的文章；</p>
-<p>也见过很多的人，远到地方诸侯，近到朝廷卿相，上至王公大臣，下至贩夫走卒，跟岑夫子、丹丘生喝过酒，与东岩子谈过经论过道，和孟浩然聊过理想讲过人生，也曾救了受困的郭子仪，拜访了舞剑的公孙娘，顺道跟杜甫组了个“李杜”的诗社组合，又跟贺知章、李适之、李琎、崔宗之、苏晋、张旭、焦遂等7个人组了个喝酒的伙伴群，群名就叫“饮中八仙”……</p>
-<p><img src="/images/e.jpg" alt="“李白”"> </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/14/big/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <script src="/assets/js/DPlayer.min.js"></script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"></link><article id="post-DD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/DD/">精彩韩国组合</a>
-    </h1>
   
 
-        
-        <a href="/2017/10/14/DD/" class="archive-article-date">
-  	<time datetime="2017-10-14T06:01:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"autoplay":0,"theme":"#FADFA3","loop":1,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/14/DD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-YY" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/YY/">纯情音乐</a>
-    </h1>
   
 
-        
-        <a href="/2017/10/14/YY/" class="archive-article-date">
-  	<time datetime="2017-10-14T05:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
-		<script>
-			new APlayer({
-				element: document.getElementById("aplayer0"),
-				narrow: false,
-				autoplay: false,
-				showlrc: 0,
-				music: {
-					title: "她的睫毛",
-					author: "周杰伦",
-					url: "http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3",
-					pic: "http://home.ustc.edu.cn/~mmmwhy/jay.jpg",
-				}
-			});
-		</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/14/YY/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -490,8 +360,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,

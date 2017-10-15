@@ -6,11 +6,11 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>时光倒流</title>
+  <title>Tag: 菜单切换 | 时光倒流</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta property="og:type" content="website">
 <meta property="og:title" content="时光倒流">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/tags/菜单切换/index.html">
 <meta property="og:site_name" content="时光倒流">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="时光倒流">
@@ -151,46 +151,34 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-list" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
+  
     
-      <header class="article-header">
-        
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2017" class="archive-year">2017</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      	<div class="article-meta">
+	      	<a href="/2017/10/15/list/" class="archive-article-date">
+  	<time datetime="2017-10-15T08:14:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
+</a>
+        </div>
+    	 
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/15/list/">自主理解js菜单切换</a>
+      <a class="archive-article-title" href="/2017/10/15/list/">自主理解js菜单切换</a>
     </h1>
   
 
-        
-        <a href="/2017/10/15/list/" class="archive-article-date">
-  	<time datetime="2017-10-15T08:14:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><p>在源码站看到一个Tab菜单切换，就想看看。<br>首先，了解css布局–定位，position:relation 根据自身的位置而定位，利用top、left进行位置移动<br>而position：absolute 根据父级元素定位而定位，父级就是一个层，或者window窗口，方法一样。</p>
-<p>步骤：先进行html+css 样式布局，需要建立四个ul li 分别为许嵩、周杰伦、林俊杰、陈奕迅<br>接着建立四个div，是为了对应四个ul li<br>为了有特殊效果，利用渐变使得li有明显的效果。补一下，渐变知识<br>linear-gradient(top,#fefefe,#ededed);top意思是从上到下，用#定义<br>颜色<br>linear 代表线性渐变 为了兼容浏览器，建议加前缀-o-/-moz/-webkit-<br>定义一个盒子模型id为tab</p>
-<p>#tab{position:relative;}<br>定义一个类名为tablist的层</p>
-<p>#tab .tabList ul li{<br>    float:left;向左浮动<br>    background:#fefefe;<br>    background:-moz-linear-gradient(top, #fefefe, #ededed);<br>    background:-o-linear-gradient(left top,left bottom, from(#fefefe), to(#ededed));<br>    background:-webkit-gradient(linear,left top,left bottom, from(#fefefe), to(#ededed));颜色过渡<br>    border:1px solid #ccc;<br>    padding:5px 0;内边距为左右上下都为5像素<br>    width:100px;宽为100像素<br>    text-align:center; 文本居中对齐<br>    margin-left:-1px;负值代表外边距向左零距离靠近<br>    position:relative;<br>    cursor:pointer;设置样式为手势<br>}<br>定义四个div的盒子id为tabCon</p>
-<p>#tab .tabCon{<br>    position:absolute;<br>    left:-1px;<br>    top:30px;直有设置了position才能用top<br>    border:1px solid #ccc;<br>    border-top:none;<br>    width:403px;<br>    height:102px;<br>}<br>再定义tabCon盒子里面四个div样式</p>
-<p>#tab .tabCon div{<br>    padding:10px;<br>    position:absolute;<br>    opacity:0;透明度 0为完全透明 1为完全不透明<br>    filter:alpha(opacity=0);这是IE浏览器渲染的语句<br>}<br>最后定义一个样式，这个样式是窗口打开时样式，类名为cur</p>
-<p>#tab .tabList li.cur{<br>    border-bottom:none;<br>    background:#fff;<br>}<br>这里是为了与js达成交互行为</p>
-<p>#tab .tabCon div.cur{<br>    opacity:1;<br>    filter:alpha(opacity=100);<br>}<br>最终效果为：</p>
-<p><img src="/images/list.jpg" alt="“诗人才子”"> </p>
-<p>js才是重重之重<br>window.onload 代表打开浏览器窗口就立即执行<br>window.onload = function() {<br>    var oDiv = document.getElementById(“tab”);获取tab<br>    var oLi = oDiv.getElementsByTagName(“div”)[0].getElementsByTagName(“li”);获取li<br>    var aCon = oDiv.getElementsByTagName(“div”)[1].getElementsByTagName(“div”);<br>    var timer = null;定义null空值<br>    for (var i = 0; i &lt; oLi.length; i++) {  oLi.length代表数量<br>        oLi[i].index = i;oLi[i]代表数组，index代表索引<br>        oLi[i].onclick = function() {  onclick代表点击事件<br>            show(this.index); this代表oLi[i]<br>        }<br>    }  利用for进行循环<br>    function show(a) {  show(this.index)与show(a) 是赋值关系<br>        index = a;<br>        var alpha = 0; 定义值<br>        for (var j = 0; j &lt; oLi.length; j++) {<br>            oLi[j].className = “”; 重置oLi[j]样式<br>            aCon[j].className = “”; 重置aCon[j]样式<br>            aCon[j].style.opacity = 0; 透明度为0 代表页面空白<br>            aCon[j].style.filter = “alpha(opacity=0)”;IE渲染<br>        }<br>        oLi[index].className = “cur”; 赋予样式”cur”<br>        clearInterval(timer); 定义定时器timer<br>        timer = setInterval(function() {<br>            alpha += 100; 与alpha = alpha+100等同<br>            alpha &gt; 100 &amp;&amp; (alpha = 100);<br>            aCon[index].style.opacity = alpha / 100;<br>            aCon[index].style.filter = “alpha(opacity=” + alpha + “)”;<br>            alpha == 100 &amp;&amp; clearInterval(timer);清除定时器<br>        },<br>        5) 改变透明度，使得页面有内容显示<br>    }<br>}<br>最后思路为：js执行的是从上到下的<br>当点击li 就会执行show(a)函数，结果div为空白，透明度为零<br>如何让页面显示，就要设置另一个函数来使得透明度为1，代表完全不透明<br>“alpha(opacity=” + alpha + “)” 两个双引号用法+连接</p>
-<p>总结：这个菜单与我想象的不一样，知识点多，没有用库，定时器的使用。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
+        <div class="article-info info-on-right">
+          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -202,273 +190,19 @@
 		</ul>
 	</div>
 
-      
+          
 
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/15/list/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
         </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-big" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/big/">大唐诗人的艰难求名路</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/14/big/" class="archive-article-date">
-  	<time datetime="2017-10-14T12:50:53.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><p>白居易：长安米贵，居住不易。</p>
-<p><img src="/images/1.jpg" alt="“诗人才子”"></p>
-<p>有时候，怀才比怀孕还难，时间虽然久了，但是没有个引产的人，还真不好生出来。</p>
-<p>要不然，怎么能够说，这世界“到处都是有才华的穷人”？</p>
-<p><img src="/images/i.jpg" alt="“诗人才子”"> </p>
-<p>千里马常有，而伯乐不常有。</p>
-<p>虽然从隋朝开始，中国就开始了通过考试选拔人才之路，但是有时候，辛辛苦苦寒窗几十年，还不如有人简简单单给你美言两三句。</p>
-<p>大唐盛世，“到处都是有才华的诗人”，再有才华的人，没有大boss的赏识和引荐，通往人生巅峰的道路一样艰难。</p>
-<p>毕竟，命运不会简单的通过一场考试来定成败。</p>
-<p><img src="/images/baijuyi.jpg" alt="“白居易”"> </p>
-<p>少年的白居易第一次来到京城长安，带着自己的作品去拜会当时的京城名流大咖顾况，顾况看着一个毛头小伙子，很不以为然，当他看到诗稿的名字写着“白居易”，就开玩笑的说：长安米贵，居住不易。</p>
-<p>可是等他读到 “离离原上草，一岁一枯荣。野火烧不尽，春风吹又生”的句子时，马上连声叫好，并说：“好诗！好食！有这么好的文采，要在长安居住又有什么难呢？”</p>
-<p>此后，顾况便经常向别人谈起白居易的诗才，盛加夸赞，白居易的诗名也就从此传开了。</p>
-<p>小白同学就这样，通过在大V的面前，成功的完成了一次面试，不仅保住了自己的名字，还扬显了自己的名声。</p>
-<p><img src="/images/libai.jpg" alt="“李白”"> </p>
-<p>另一位诗界翘楚李白同学，也是通过自己超凡脱俗的实力，得到了许多达官贵人引荐，最后还直接到了唐明皇御前，给杨贵妃专职写诗。三首醉后即兴而就的《清平调》，而今读来，依然朗朗上口，一时极致。</p>
-<p>而他在向众多当时大V自我推荐的过程中，最让人津津热道的，莫过于《与韩荆州书》。当年他逛到襄阳的时候，直接给地方长官荆州大咖韩朝宗写了一封自荐信，向他引荐了自己。</p>
-<p>“生不用封万户侯，但愿一识韩荆州。”文章开篇，李白就给韩朝宗一顶大大的高帽，说他有周公吐哺之风，去他家作客就好像登龙门一般，进去一个样，出来一个样。</p>
-<p>然后又说自己十五岁就开始仗剑走天涯，三十岁的时候写了很多的文章。</p>
-<p>十五六年来，走过了很多的路，从陇西流落到楚汉，又从楚汉奔波到长安；</p>
-<p>看过很多的风景，什么难于登天的蜀道啊，彩云之间的白帝城啊，相看两不厌的敬亭山啊，从九天飞落而来的庐山瀑布啊，在许多的路，许多的桥，许多的亭子画壁，还留下了署名的作品，写了洒脱飘逸的文章；</p>
-<p>也见过很多的人，远到地方诸侯，近到朝廷卿相，上至王公大臣，下至贩夫走卒，跟岑夫子、丹丘生喝过酒，与东岩子谈过经论过道，和孟浩然聊过理想讲过人生，也曾救了受困的郭子仪，拜访了舞剑的公孙娘，顺道跟杜甫组了个“李杜”的诗社组合，又跟贺知章、李适之、李琎、崔宗之、苏晋、张旭、焦遂等7个人组了个喝酒的伙伴群，群名就叫“饮中八仙”……</p>
-<p><img src="/images/e.jpg" alt="“李白”"> </p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/14/big/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
+        <div class="clearfix"></div>
+    </header>
   </div>
-  
 </article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
-    <script src="/assets/js/DPlayer.min.js"></script><link rel="stylesheet" type="text/css" href="/assets/css/DPlayer.min.css"></link><article id="post-DD" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  
+    </div></section>
+  
 
-  <div class="article-inner">
     
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/DD/">精彩韩国组合</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/14/DD/" class="archive-article-date">
-  	<time datetime="2017-10-14T06:01:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><div id="dplayer0" class="dplayer" style="margin-bottom: 20px;"></div><script>var dplayer0 = new DPlayer({"element":document.getElementById("dplayer0"),"autoplay":0,"theme":"#FADFA3","loop":1,"video":{"url":"http://devtest.qiniudn.com/若能绽放光芒.mp4","pic":"http://devtest.qiniudn.com/若能绽放光芒.png"},"danmaku":{"api":"http://dplayer.daoapp.io","id":"9E2E3368B56CDBB4","token":"tokendemo"}});</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/14/DD/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-YY" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2017/10/14/YY/">纯情音乐</a>
-    </h1>
-  
-
-        
-        <a href="/2017/10/14/YY/" class="archive-article-date">
-  	<time datetime="2017-10-14T05:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-10-14</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <script src="\assets\js\APlayer.min.js"> </script><div id="aplayer0" class="aplayer" style="margin-bottom: 20px;"></div>
-		<script>
-			new APlayer({
-				element: document.getElementById("aplayer0"),
-				narrow: false,
-				autoplay: false,
-				showlrc: 0,
-				music: {
-					title: "她的睫毛",
-					author: "周杰伦",
-					url: "http://home.ustc.edu.cn/~mmmwhy/%d6%dc%bd%dc%c2%d7%20-%20%cb%fd%b5%c4%bd%de%c3%ab.mp3",
-					pic: "http://home.ustc.edu.cn/~mmmwhy/jay.jpg",
-				}
-			});
-		</script>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2017/10/14/YY/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-  
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-  
 
 
           </div>
@@ -490,10 +224,10 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
+		isHome: false,
 		isPost: false,
 		isArchive: false,
-		isTag: false,
+		isTag: true,
 		isCategory: false,
 		open_in_new: false,
 		toc_hide_index: true,
