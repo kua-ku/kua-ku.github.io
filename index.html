@@ -172,9 +172,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script><p>&lt;!DOCTYPE html&gt;</p>
-<html><br><head><br>    <meta charset="utf-8"><br>    <title>Ajax</title><br>    <script type="text/javascript"><br>    window.onload = function() {<br>            document.getElementsByTagName(“a”)[0].onclick = function(){<br>            var request = new XMLHttpRequest();<br>            var url = this.href;<br>            var method = “GET”;<br>            request.open(method,url);<br>            request.send(null);<br>            request.onreadystatechange = function(){<br>                if (request.readyState == 4) {<br><br>                        alert(444);<br>                }<br>            }<br>            return false; 默认行为<br>         }<br>}<br>    </script><br></head><br><body><br>   <a href="Ajax.txt">Ajax</a><br></body><br></html>
+        <script src="\assets\js\APlayer.min.js"> </script><pre><code>&lt;script type=&quot;text/javascript&quot;&gt;
+window.onload = function() {
+        document.getElementsByTagName(&quot;a&quot;)[0].onclick = function(){
+        var request = new XMLHttpRequest();
+        var url = this.href;
+        var method = &quot;GET&quot;;
+        request.open(method,url);
+        request.send(null);
+        request.onreadystatechange = function(){
+            if (request.readyState == 4) {
 
+                    alert(444);
+            }
+        }    
+        return false; 默认行为
+     }
+&lt;/script&gt;
+&lt;a href=&quot;Ajax.txt&quot;&gt;Ajax&lt;/a&gt;
+</code></pre>
       
 
       
