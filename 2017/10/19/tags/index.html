@@ -8,16 +8,16 @@
   <link rel="dns-prefetch" href="https://user.qzone.qq.com/1689981328/infocenter">
   <title>简易后台菜单折叠 | 时光倒流</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="$(function(){         $(&quot;box&quot;).find(&quot;.header&quot;).click(                //获取当前元素内容                var next = $(this).next();                //获取当前父级元素                var parent = $(this).parent();">
+  <meta name="description" content="$(function(){     $(&amp;quot;box&amp;quot;).find(&amp;quot;.header&amp;quot;).click(            //获取当前元素内容            var next = $(this).next();            //获取当前父级元素            var parent = $(this).parent();">
 <meta property="og:type" content="article">
 <meta property="og:title" content="简易后台菜单折叠">
 <meta property="og:url" content="https://user.qzone.qq.com/1689981328/infocenter/2017/10/19/tags/index.html">
 <meta property="og:site_name" content="时光倒流">
-<meta property="og:description" content="$(function(){         $(&quot;box&quot;).find(&quot;.header&quot;).click(                //获取当前元素内容                var next = $(this).next();                //获取当前父级元素                var parent = $(this).parent();">
-<meta property="og:updated_time" content="2017-10-18T17:01:20.663Z">
+<meta property="og:description" content="$(function(){     $(&amp;quot;box&amp;quot;).find(&amp;quot;.header&amp;quot;).click(            //获取当前元素内容            var next = $(this).next();            //获取当前父级元素            var parent = $(this).parent();">
+<meta property="og:updated_time" content="2017-10-18T17:17:18.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="简易后台菜单折叠">
-<meta name="twitter:description" content="$(function(){         $(&quot;box&quot;).find(&quot;.header&quot;).click(                //获取当前元素内容                var next = $(this).next();                //获取当前父级元素                var parent = $(this).parent();">
+<meta name="twitter:description" content="$(function(){     $(&amp;quot;box&amp;quot;).find(&amp;quot;.header&amp;quot;).click(            //获取当前元素内容            var next = $(this).next();            //获取当前父级元素            var parent = $(this).parent();">
   
     <link rel="alternative" href="/atom.xml" title="时光倒流" type="application/atom+xml">
   
@@ -174,22 +174,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script> <script type="text/javascript">
-    $(function(){
-        $("box").find(".header").click(
-               //获取当前元素内容
-               var next = $(this).next();
-               //获取当前父级元素
-               var parent = $(this).parent();
-               //获取父级同辈元素
-               var sibs = parent.siblings();
-               //将同辈元素里面的内容隐藏
-               sibs.find(".content").hide();
-               //当前内容显示
-               next.show();
-            );
-        })
- </script>
+        <script src="\assets\js\APlayer.min.js"> </script><pre><code>$(function(){
+    $(&quot;box&quot;).find(&quot;.header&quot;).click(
+           //获取当前元素内容
+           var next = $(this).next();
+           //获取当前父级元素
+           var parent = $(this).parent();
+           //获取父级同辈元素
+           var sibs = parent.siblings();
+           //将同辈元素里面的内容隐藏
+           sibs.find(&quot;.content&quot;).hide();
+           //当前内容显示
+           next.show();
+        );
+    })
+</code></pre>
       
 
       

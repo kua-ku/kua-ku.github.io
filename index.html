@@ -172,22 +172,21 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="\assets\js\APlayer.min.js"> </script> <script type="text/javascript">
-    $(function(){
-        $("box").find(".header").click(
-               //获取当前元素内容
-               var next = $(this).next();
-               //获取当前父级元素
-               var parent = $(this).parent();
-               //获取父级同辈元素
-               var sibs = parent.siblings();
-               //将同辈元素里面的内容隐藏
-               sibs.find(".content").hide();
-               //当前内容显示
-               next.show();
-            );
-        })
- </script>
+        <script src="\assets\js\APlayer.min.js"> </script><pre><code>$(function(){
+    $(&quot;box&quot;).find(&quot;.header&quot;).click(
+           //获取当前元素内容
+           var next = $(this).next();
+           //获取当前父级元素
+           var parent = $(this).parent();
+           //获取父级同辈元素
+           var sibs = parent.siblings();
+           //将同辈元素里面的内容隐藏
+           sibs.find(&quot;.content&quot;).hide();
+           //当前内容显示
+           next.show();
+        );
+    })
+</code></pre>
       
 
       
